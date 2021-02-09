@@ -4,6 +4,8 @@ HabitShark is a no-frills web application that allows you to input a habit and m
 
 There is one goal in HabitShark—> keep the streak alive so that your character can survive.
 
+# Description
+
 When a user visits the landing page they will be greeted with the option of either logging in to an already existing account or creating a new one entirely.
 
 Once a user has registered an account with HabitShark, the habit shark is placed in the water and the user is prompted to enter in the first habit that they would like to track. 
@@ -29,6 +31,9 @@ This is meant to encourage users to hone in on and track only the most important
 The habit shark doesn’t give second chances.
 
 Keep the streak alive to survive with HabitShark.
+
+# Technologies Used
+React / Express / Node / PostgreSQL
 
 # Author
 Quinton Campbell
