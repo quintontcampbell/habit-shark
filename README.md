@@ -1,11 +1,44 @@
-# Habit Streak
+# HabitShark
 
-HabitStreak is a no-frills web application that allows you to input a habit and mark whether or not you completed it every single day. 
+HabitShark is a no-frills web application that allows you to input a habit and mark whether or not you completed it every single day. 
 
-There is one goal--> keep the streak alive.
+There is one goal in HabitShark—> keep the streak alive so that your character can survive.
 
-(What if it was called HabitShark and for every habit you track there's a corresponding habit shark that gets placed behind it and if you ever fail to complete a habit, your streak dies and the habit shark eats you)
+When a user visits the landing page they will be greeted with an option of either logging in to an already existing account or creating a new one entirely.
 
-Keep the streak alive to survive.
+Once a user has registered an account with HabitShark the habit shark is placed in the water and the user is prompted to enter in the first habit that they would like to track. 
 
-HabitShark.
+This habit is a goal that they aim to accomplish every single day and is represented by a hole in the hull of their habit boat or “haboat”.
+
+Everyday that a habit is marked as being completed, the water that comes into the boat through that habit’s habit-hole is bucketed out of the user’s haboat keeping it afloat for another day.
+
+If a user wishes to track additional habits they can simply press the “track new habit” button, which will lead them to the “new habit form”.
+
+Submitting this form will place another hole in the hull of their haboat.
+
+The more habits a user tracks, the more holes are placed in the hull of their habit boat.
+
+Each day a user successfully buckets out the incoming water from their habit-holes a tally mark will be added to the side of their boat indicating the cumulative number of days survived.
+
+If the water filling the boat from any one habit-hole doesn’t get bucketed out at least once a day; the user’s haboat will submerge and the user’s character will be eaten by the always hungry habit shark.
+
+This encourages users to hone in on and track only the most important of habits that they want to accomplish every single day.
+
+If the user’s habit boat sinks and the user is eaten, then the user is met with a “GAME OVER” screen and is prompted to try again with a fresh boat and a form to input their first habit.
+
+The habit shark doesn’t give second chances.
+
+Keep the streak alive to survive with HabitShark.
+
+This project has been a blast to work on. 
+
+I am looking forward to learning even more and fully expanding into a professional full stack web development role.
+
+My name’s Quinton and I look forward to working with you!
+
+————————
+
+- Potential rewards for reaching set amount of days completed
+- Potential donation punishment if habit shark eats you through Stripe API or PayPal API (or even just a commitment table)
+- Potential Twilio text reminders to bucket out the water in your habit boat
+
