@@ -4,7 +4,7 @@ import configuration from "../config.js";
 const addExpressSession = (app) => {
   app.use(
     session({
-      name: "bt-activity-tracker-app-session",
+      name: "habit-shark-session",
       keys: [configuration.session.secret],
       resave: true,
       maxAge: configuration.maxAge,

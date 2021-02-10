@@ -5,7 +5,7 @@
   },
   "license": "UNLICENSED",
   "private": true,
-  "name": "bt-activity-tracker-app-client",
+  "name": "habit-shark-client",
   "version": "0.0.1",
   "engines": {
     "node": "^14.15"

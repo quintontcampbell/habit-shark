@@ -17,5 +17,5 @@
     "titleBar.inactiveForeground": "#e7e7e799"
   },
   "peacock.color": "#215732",
-  "window.title": "${activeEditorShort}${separator}bt-activity-tracker-app${separator}${rootName}"
+  "window.title": "${activeEditorShort}${separator}habit-shark${separator}${rootName}"
 }

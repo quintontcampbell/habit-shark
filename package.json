@@ -7,17 +7,16 @@
     "e2e"
   ],
   "scripts": {
-    "build:client": "yarn workspace bt-activity-tracker-app-client build",
-    "dev": "yarn workspace bt-activity-tracker-app-server dev",
-    "dev:debug": "yarn workspace bt-activity-tracker-app-server dev:debug",
-    "heroku-postbuild": "yarn workspace bt-activity-tracker-app-client build",
-    "start": "yarn workspace bt-activity-tracker-app-server start",
-    "dev:cypress": "yarn workspace bt-activity-tracker-app-server dev:e2e",
-    "e2e:open": "yarn workspace bt-activity-tracker-app-e2e e2e:open",
-    "e2e:run": "yarn workspace bt-activity-tracker-app-e2e e2e:run"
+    "build:client": "yarn workspace habit-shark-client build",
+    "dev": "yarn workspace habit-shark-server dev",
+    "dev:debug": "yarn workspace habit-shark-server dev:debug",
+    "heroku-postbuild": "yarn workspace habit-shark-client build",
+    "start": "yarn workspace habit-shark-server start",
+    "dev:cypress": "yarn workspace habit-shark-server dev:e2e",
+    "e2e:open": "yarn workspace habit-shark-e2e e2e:open",
+    "e2e:run": "yarn workspace habit-shark-e2e e2e:run"
   },
   "engines": {
-    "node": "^14.15",
-    "yarn": "1.22.10"
+    "node": "^14.15"
   }
 }

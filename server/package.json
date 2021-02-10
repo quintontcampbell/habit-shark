@@ -19,7 +19,7 @@
   "private": true,
   "type": "module",
   "version": "0.0.1",
-  "name": "bt-activity-tracker-app-server",
+  "name": "habit-shark-server",
   "engines": {
     "node": "^14.15"
   },
