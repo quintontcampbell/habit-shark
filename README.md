@@ -38,4 +38,4 @@ Keep the streak alive to survive with HabitShark.
 React / Express / Node / PostgreSQL
 
 # Author
-Quinton Campbell
+Quinton/T/Campbell
