@@ -11,4 +11,5 @@ rootRouter.use("/api/v1/user-sessions", userSessionsRouter);
 rootRouter.use("/api/v1/users", usersRouter); //place your server-side routes here
 rootRouter.get('/cool', (req, res) => res.send(cool()))
 
+
 export default rootRouter;
