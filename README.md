@@ -32,6 +32,8 @@ The habit shark doesn’t give second chances.
 
 Keep the streak alive to survive with HabitShark.
 
+# TODO Features
+
 # Challenges Faced 
 
 # Technologies Used
