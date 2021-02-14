@@ -35,8 +35,6 @@ Keep the streak alive to survive with HabitShark.
 # Live App
 https://habit-shark.herokuapp.com/
 
-# TODO Features
-
 # Challenges Faced 
 
 # Technologies Used
