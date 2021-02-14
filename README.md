@@ -32,6 +32,9 @@ The habit shark doesn’t give second chances.
 
 Keep the streak alive to survive with HabitShark.
 
+# Live App
+https://habit-shark.herokuapp.com/
+
 # TODO Features
 
 # Challenges Faced 
