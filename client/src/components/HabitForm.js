@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import ErrorList from "./ErrorList.js"
+import translateServerErrors from "../services/translateServerErrors.js"
 
 const HabitForm = props => {
-
+  const [errors, setErrors] = useState([])
   const [newHabit, setNewHabit] = useState({
     name: ""
   })
@@ -16,9 +18,17 @@ const HabitForm = props => {
         body: JSON.stringify(newHabitData)
       })
       if (!response.ok) {
-        const errorMessage = `${response.status} (${response.statusText})`
-        const error = new Error(errorMessage)
-        throw error
+        if (response.status === 422) {
+          const body = await response.json()
+          const newErrors = translateServerErrors(body.errors)
+          setErrors(newErrors)
+        }
+        else {
+          throw new Error(`${response.status} (${response.statusText})`)
+        }
+      }
+      else {
+        setErrors([])
       }
     } catch(error) {
       console.error(`Error in fetch: ${error.message}`)
@@ -52,6 +62,7 @@ const HabitForm = props => {
   return (
     <div className= "callout">
       <h3>Track New Habit</h3>
+      <ErrorList errors={errors} />
       <form onSubmit={handleSubmit}>
         <label>
           <input
