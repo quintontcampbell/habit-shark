@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Redirect } from "react-router-dom"
 import ErrorList from "./ErrorList.js"
 import translateServerErrors from "../services/translateServerErrors.js"
 
@@ -7,6 +8,7 @@ const HabitForm = props => {
   const [newHabit, setNewHabit] = useState({
     name: ""
   })
+  const [shouldRedirect, setShouldRedirect] = useState(false)
 
   const postHabit = async (newHabitData) => {
     try {
@@ -30,9 +32,16 @@ const HabitForm = props => {
       else {
         setErrors([])
       }
+      else {
+        setShouldRedirect(true)
+      }
     } catch(error) {
       console.error(`Error in fetch: ${error.message}`)
     }
+  }
+
+   if (shouldRedirect) {
+    return <Redirect to="/habits" />
   }
 
   const resetFields = () => {

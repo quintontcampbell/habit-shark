@@ -18,13 +18,12 @@ const HabitIndex = props => {
       console.error(`Error in fetch: ${error.message}`)
     }
   }
-
+  
   useEffect(() => {
     getHabits()
   }, [])
 
   const habitItems = habits.map((habit) => {
-    // debugger
     return (
       <HabitTile
         key={habit.id}
@@ -36,7 +35,7 @@ const HabitIndex = props => {
 
   return (
     <div>
-      <h1>Habits</h1>
+      <h1>Tracked Habits</h1>
       <div>{habitItems}</div>
     </div>
   )
