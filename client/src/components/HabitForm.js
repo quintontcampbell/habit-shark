@@ -31,8 +31,6 @@ const HabitForm = props => {
       }
       else {
         setErrors([])
-      }
-      else {
         setShouldRedirect(true)
       }
     } catch(error) {

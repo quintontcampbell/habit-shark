@@ -26,8 +26,8 @@ const App = (props) => {
     <Router>
       <TopBar user={currentUser} />
       <Switch>
-        <Route exact path="/" component={HabitForm}/>
-        <Route exact path="/habits" component={HabitIndex}/>
+        <Route exact path="/" component={HabitForm} />
+        <Route exact path="/habits" component={HabitIndex} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
       </Switch>
