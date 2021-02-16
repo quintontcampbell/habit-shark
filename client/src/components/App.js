@@ -7,6 +7,7 @@ import "../assets/scss/main.scss";
 import RegistrationForm from "./registration/RegistrationForm";
 import SignInForm from "./authentication/SignInForm";
 import TopBar from "./layout/TopBar";
+import Footer from "./layout/Footer"
 import HabitForm from "./HabitForm"
 import HabitIndex from "./HabitIndex"
 
@@ -25,13 +26,12 @@ const App = (props) => {
     <Router>
       <TopBar user={currentUser} />
       <Switch>
-        <Route exact path="/">
-        </Route>
+        <Route exact path="/" component={HabitForm}/>
+        <Route exact path="/habits" component={HabitIndex}/>
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
       </Switch>
-      <HabitForm />
-      <HabitIndex />
+      <Footer />
     </Router>
   );
 };

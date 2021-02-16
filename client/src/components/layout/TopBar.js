@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SignOutButton from "../authentication/SignOutButton";
+import HabitSharkLogo from "../../assets/scss/images/shark.svg"
 
 const TopBar = ({ user }) => {
   const unauthenticatedListItems = [
@@ -24,9 +25,12 @@ const TopBar = ({ user }) => {
     <div className="top-bar">
       <div className="top-bar-left">
         <ul className="menu">
-          <li className="menu-text">HabitShark</li>
-          <li>
-            <Link to="/">Home</Link>
+        <img src={HabitSharkLogo}/>
+          <li className="menu-text">
+            <Link to="/">HabitShark</Link>
+          </li>
+          <li className="menu-text">
+            <Link to="/habits">Habits</Link>
           </li>
         </ul>
       </div>

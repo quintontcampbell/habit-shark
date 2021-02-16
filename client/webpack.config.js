@@ -41,8 +41,15 @@ module.exports = {
         options: { presets: ["@babel/env"], cwd: path.resolve(__dirname) },
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        loader: "file-loader",
+        test: /\.(png|jp(e*)g|svg|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[hash]-[name].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.module\.s(a|c)ss$/,
