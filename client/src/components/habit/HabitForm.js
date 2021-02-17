@@ -56,6 +56,7 @@ const HabitForm = props => {
 
   const clearForm = event => {
     event.preventDefault()
+    setErrors([])
     setNewHabit({
       name: ""
     })
@@ -63,10 +64,13 @@ const HabitForm = props => {
 
   return (
     <div className= "callout">
-      <h3>Track New Habit</h3>
+      <div className="callout small primary">
+        <h3>Track New Habit</h3>
+      </div>
       <ErrorList errors={errors} />
       <form onSubmit={handleSubmit}>
         <label>
+          Name
           <input
             type="text"
             name="name"
