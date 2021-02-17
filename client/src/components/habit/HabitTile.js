@@ -3,14 +3,10 @@ import HabitDelete from "./HabitDelete"
 
 const HabitTile = ({ habit }) => {
   return (
-    <div className="button-group">
-      <h3>
+      <li>
         {habit.name}
-      </h3>
-      <div>
         <HabitDelete habit={habit}/>
-      </div>
-    </div>
+      </li>
   )
 }
 

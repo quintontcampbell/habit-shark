@@ -8,9 +8,7 @@ const HabitIndex = props => {
     try {
       const response = await fetch(`/api/v1/habits`)
       if (!response.ok) {
-        const errorMessage = `${response.status} (${response.statusText})`
-        const error = new Error(errorMessage)
-        throw error
+        throw new Error(`${response.status} (${response.statusText})`)
       }
       const body = await response.json()
       setHabits(body.habits)
@@ -34,10 +32,10 @@ const HabitIndex = props => {
   })
 
   return (
-    <div>
-      <h1>Tracked Habits</h1>
-      <div>{habitItems}</div>
-    </div>
+    <ul>
+      <h2>Tracked Habits</h2>
+      {habitItems}
+    </ul>
   )
 }
 
