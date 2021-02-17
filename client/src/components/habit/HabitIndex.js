@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import HabitTile from "./HabitTile.js"
+import HabitTile from "./HabitTile"
 
 const HabitIndex = props => {
   const [habits, setHabits] = useState([])
@@ -25,11 +25,11 @@ const HabitIndex = props => {
 
   const habitItems = habits.map((habit) => {
     return (
-      <HabitTile
-        key={habit.id}
-        habit={habit}
-        user={props.user}
-      />
+        <HabitTile
+          key={habit.id}
+          habit={habit}
+          user={props.user}
+        />
     )
   })
 

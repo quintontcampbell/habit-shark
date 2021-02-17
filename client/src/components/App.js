@@ -8,8 +8,8 @@ import RegistrationForm from "./registration/RegistrationForm";
 import SignInForm from "./authentication/SignInForm";
 import TopBar from "./layout/TopBar";
 import Footer from "./layout/Footer"
-import HabitForm from "./HabitForm"
-import HabitIndex from "./HabitIndex"
+import HabitForm from "./habit/HabitForm"
+import HabitIndex from "./habit/HabitIndex"
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
