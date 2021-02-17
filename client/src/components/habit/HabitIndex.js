@@ -32,7 +32,7 @@ const HabitIndex = props => {
   })
 
   return (
-    <ul>
+    <ul className="callout small success">
       <h2>Tracked Habits</h2>
       {habitItems}
     </ul>

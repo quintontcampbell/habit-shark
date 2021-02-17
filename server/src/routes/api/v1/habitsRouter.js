@@ -1,5 +1,5 @@
 import express from "express"
-import objection, { ValidationError } from "objection"
+import { ValidationError } from "objection"
 import cleanUserInput from "../../../services/cleanUserInput.js"
 
 import { Habit } from "../../../models/index.js"
