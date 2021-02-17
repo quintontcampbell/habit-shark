@@ -32,4 +32,16 @@ habitsRouter.post("/", async (req, res) => {
   }
 })
 
+habitsRouter.delete("/", async (req, res) => {
+  console.log(req.body)
+  try {
+    const { id } = req.body
+    console.log(id)
+    await Habit.query().deleteById(id)
+    return res.status(200).json()
+  } catch(error) {
+    return res.status(500).json({ error: error})
+  }
+})
+
 export default habitsRouter

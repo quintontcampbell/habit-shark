@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import { Redirect } from "react-router-dom"
-import ErrorList from "./ErrorList.js"
-import translateServerErrors from "../services/translateServerErrors.js"
+import ErrorList from "../ErrorList"
+import translateServerErrors from "../../services/translateServerErrors"
 
 const HabitForm = props => {
   const [errors, setErrors] = useState([])
@@ -15,7 +15,7 @@ const HabitForm = props => {
       const response = await fetch(`/api/v1/habits`, {
         method: "POST",
         headers: new Headers({
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         }),
         body: JSON.stringify(newHabitData)
       })

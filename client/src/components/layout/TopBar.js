@@ -25,7 +25,7 @@ const TopBar = ({ user }) => {
     <div className="top-bar">
       <div className="top-bar-left">
         <ul className="menu">
-        <img src={HabitSharkLogo}/>
+        <Link to="/"><img src={HabitSharkLogo}/></Link>
           <li className="menu-text">
             <Link to="/">HabitShark</Link>
           </li>
