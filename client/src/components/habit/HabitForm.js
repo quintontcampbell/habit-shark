@@ -5,10 +5,10 @@ import translateServerErrors from "../../services/translateServerErrors"
 
 const HabitForm = props => {
   const [errors, setErrors] = useState([])
+  const [shouldRedirect, setShouldRedirect] = useState(false)
   const [newHabit, setNewHabit] = useState({
     name: ""
   })
-  const [shouldRedirect, setShouldRedirect] = useState(false)
 
   const postHabit = async (newHabitData) => {
     try {
@@ -42,16 +42,9 @@ const HabitForm = props => {
     return <Redirect to="/habits" />
   }
 
-  const resetFields = () => {
-    setNewHabit({
-      name: ""
-    })
-  }
-
   const handleSubmit = event => {
     event.preventDefault()
     postHabit(newHabit)
-    resetFields()
   }
 
   const handleInputChange = event => {
@@ -63,7 +56,9 @@ const HabitForm = props => {
 
   const clearForm = event => {
     event.preventDefault()
-    resetFields()
+    setNewHabit({
+      name: ""
+    })
   }
 
   return (

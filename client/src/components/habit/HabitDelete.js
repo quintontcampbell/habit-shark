@@ -27,9 +27,7 @@ const HabitDelete = ({ habit }) => {
     history.go(0)
   }
 
-  return (
-    <button className="button" onClick={onClickHandler}>Delete Habit</button>
-  )
+  return <button className="button" onClick={onClickHandler}>Delete Habit</button>
 }
 
 export default HabitDelete
