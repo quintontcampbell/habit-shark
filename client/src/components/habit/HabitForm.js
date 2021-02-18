@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Redirect } from "react-router-dom"
 import ErrorList from "../ErrorList"
 import translateServerErrors from "../../services/translateServerErrors"
@@ -9,6 +9,12 @@ const HabitForm = props => {
   const [newHabit, setNewHabit] = useState({
     name: ""
   })
+
+  const inputRef = useRef(null)
+
+  useEffect(() => {
+    inputRef.current.focus()
+  }, [])
 
   const postHabit = async (newHabitData) => {
     try {
@@ -74,8 +80,10 @@ const HabitForm = props => {
           <input
             type="text"
             name="name"
+            placeholder="swim faster"
             onChange={handleInputChange}
-            value={newHabit.name}>
+            value={newHabit.name}
+            ref={inputRef}>
           </input>
         </label>
         <div className="button-group">
