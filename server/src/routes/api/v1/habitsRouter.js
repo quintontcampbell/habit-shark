@@ -33,7 +33,6 @@ habitsRouter.post("/", async (req, res) => {
 })
 
 habitsRouter.delete("/", async (req, res) => {
-  console.log(req.body)
   try {
     const { id } = req.body
     console.log(id)
