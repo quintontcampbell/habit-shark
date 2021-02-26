@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom"
 import ErrorList from "../ErrorList"
 import translateServerErrors from "../../services/translateServerErrors"
 
-const HabitForm = props => {
+const HabitForm = () => {
   const [errors, setErrors] = useState([])
   const [shouldRedirect, setShouldRedirect] = useState(false)
   const [newHabit, setNewHabit] = useState({
@@ -16,14 +16,14 @@ const HabitForm = props => {
     inputRef.current.focus()
   }, [])
 
-  const postHabit = async (newHabitData) => {
+  const postHabit = async (newHabit) => {
     try {
       const response = await fetch(`/api/v1/habits`, {
         method: "POST",
         headers: new Headers({
           "Content-Type": "application/json"
         }),
-        body: JSON.stringify(newHabitData)
+        body: JSON.stringify(newHabit)
       })
       if (!response.ok) {
         if (response.status === 422) {

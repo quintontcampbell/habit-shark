@@ -8,8 +8,8 @@ import RegistrationForm from "./registration/RegistrationForm";
 import SignInForm from "./authentication/SignInForm";
 import TopBar from "./layout/TopBar";
 import Footer from "./layout/Footer"
-import HabitForm from "./habit/HabitForm"
-import HabitIndex from "./habit/HabitIndex"
+import HabitForm from "./habits/HabitForm"
+import HabitIndex from "./habits/HabitIndex"
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -26,10 +26,10 @@ const App = (props) => {
     <Router>
       <TopBar user={currentUser} />
       <Switch>
-        <Route exact path="/" component={HabitForm} />
         <Route exact path="/habits" component={HabitIndex} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
+        <Route exact path="/" component={HabitForm} />
       </Switch>
       <Footer />
     </Router>
